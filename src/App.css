@@ -1,0 +1,42 @@
+:root {
+    --primary_color: rgb(0, 0, 0);
+    --text_color: rgb(255, 255, 255);
+    --secondary_color: rgb(105, 105, 105);
+    --tertiary_color: rgb(235, 235, 235);
+    --quaternary_color: rgb(255, 255, 0);
+}
+
+
+.textmain {
+    color: var(--text_color);
+}
+
+.textprimary {
+    color: var(--primary_color);
+}
+
+.textsecondary {
+    color: var(--secondary_color);
+}
+
+.bgprimary {
+    background-color: var(--primary_color);
+}
+
+.bgsecondary {
+    background-color: var(--secondary_color);
+}
+
+
+
+.text-3D {
+    background: linear-gradient(to right, var(--secondary_color), var(--primary_color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        2px 2px 0 rgba(255, 255, 255, 0.2),
+        4px 4px 0 rgba(0, 0, 0, 0.2),
+        6px 6px 0 rgba(0, 0, 0, 0.1);
+}
