@@ -1,0 +1,16 @@
+import React from 'react'
+
+const SectionCards = ({ title, children }) => {
+    return (
+        <section className="relative bg-white rounded-2xl p-6 shadow-xl backdrop-blur-2xl bg-opacity-80">
+            {/* Top Dots */}
+            <div className="absolute top-2 left-2 w-3 h-3 bg-gradient-to-tr from-white to-gray-400 rounded-full shadow-lg shadow-black" />
+            <div className="absolute top-2 right-2 w-3 h-3 bg-gradient-to-tr from-white to-gray-400 rounded-full shadow-lg shadow-black" />
+            {/* Content */}
+            <h2 className="text-2xl font-bold text-gray-800 mb-2 mt-3">{title}</h2>
+            <div className="text-sm text-gray-600 ml-6">{children}</div>
+        </section>
+    )
+}
+
+export default SectionCards

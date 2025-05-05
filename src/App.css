@@ -1,9 +1,8 @@
 :root {
     --primary_color: rgb(0, 0, 0);
+    --secondary_color: rgb(255, 255, 255);
+    --nav_color:rgb(0, 0, 0);
     --text_color: rgb(255, 255, 255);
-    --secondary_color: rgb(105, 105, 105);
-    --tertiary_color: rgb(235, 235, 235);
-    --quaternary_color: rgb(255, 255, 0);
 }
 
 * {

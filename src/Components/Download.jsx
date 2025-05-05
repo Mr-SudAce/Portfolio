@@ -6,7 +6,7 @@ const Download = () => {
     return (
         <>
             <a href={cv} download>
-                <button className="duration-300 -rotate-[45deg] bgprimary border textsecondary bg-gray-50 font-semibold px-3 py-2 flex flex-row items-center gap-3">
+                <button className="duration-300 -rotate-[45deg] bgsecondary border textprimary bg-gray-50 font-semibold px-3 py-2 flex flex-row items-center gap-3">
                     Download CV
                     <FiDownload className="w-6 h-6" />
                 </button>

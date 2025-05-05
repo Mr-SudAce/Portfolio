@@ -97,7 +97,7 @@ const Project = () => {
                             md:h-[200vh] md:w-[550vh] md:rotate-45 md:top-[200vh]
                             '
                     style={{
-                        backgroundColor: "var(--secondary_color)"
+                        backgroundImage: "linear-gradient(to left, var(--primary_color) 20%, var(--secondary_color) 100%)",
                     }}
                 ></div>
             </motion.div>
@@ -149,7 +149,7 @@ const Project = () => {
                                                 {project.year}
                                             </p>
                                             <div className={`flex flex-col max-w-[25vh] min-w-[10vh] ${isLeft ? "items-start ml-2" : "items-end mr-2"}`}>
-                                                <h3 className="text-md font-bold textmain group-hover:textmain transition-colors duration-300  truncate overflow-hidden whitespace-nowrap">
+                                                <h3 className={`text-md font-bold ${isLeft ? "textprimary" : "textsecondary"} group-hover:textmain transition-colors duration-300  truncate overflow-hidden whitespace-nowrap`}>
                                                     {project.title}
                                                 </h3>
                                                 <p className={`text-sm font-semibold mb-1 ${isLeft ? "textprimary" : "textsecondary"}`}>

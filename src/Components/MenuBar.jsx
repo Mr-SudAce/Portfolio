@@ -24,7 +24,7 @@ const MenuBar = () => {
             key={index}
             to={`/${item.name}/`}
             className="text-bold lg:text-4xl md:text-4xl text-3xl"
-            style={{ color: "var(--primary_color)" }}
+            style={{ color: "var(--nav_color)" }}
           >
             <motion.span
               initial={{ opacity: 0, x: item.y }}

@@ -28,7 +28,7 @@ const Home = () => {
                     md:h-[450vh] md:w-[550vh] md:rotate-45 md:top-[200vh]
                     '
                         style={{
-                            backgroundColor: "var(--primary_color)"
+                            backgroundImage: "linear-gradient(to left, var(--primary_color) 70%, var(--secondary_color) 100%)",
                         }}
                     ></div>
                 </motion.div>
