@@ -6,6 +6,9 @@
     --quaternary_color: rgb(255, 255, 0);
 }
 
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 .textmain {
     color: var(--text_color);

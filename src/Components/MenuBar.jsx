@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const icons = [
   { icon: <RiHome9Fill />, name: "home", duration: 0.5, delay: 0.5, y: -10 },
   { icon: <FaProjectDiagram />, name: "projects", duration: 0.5, delay: 0.8, y: -10 },
-  { icon: <BiSolidUserDetail />, name: "about", duration: 0.5, delay: 1.1, y: -10 },
+  { icon: <BiSolidUserDetail />, name: "aboutme", duration: 0.5, delay: 1.1, y: -10 },
   { icon: <MdContactPhone />, name: "contact", duration: 0.5, delay: 1.4, y: -10 },
 ];
 const MenuBar = () => {
@@ -30,6 +30,7 @@ const MenuBar = () => {
               initial={{ opacity: 0, x: item.y }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: item.duration, delay: item.delay }}
+              title={`${item.name.charAt(0).toUpperCase()}${item.name.slice(1)}`}
             >
               {item.icon}
             </motion.span>

@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import DjangoImg from "../assets/Image/djangoImg.png";
 import PythonImg from "../assets/Image/pythonImg.png";
 import ReactImg from "../assets/Image/reactImg.png";
 import JSImg from "../assets/Image/jsImg.png";
+
+import { Menu } from "../index"
 
 
 
@@ -84,6 +86,7 @@ const projects = [
 const Project = () => {
     return (
         <>
+
             <motion.div initial={{ opacity: 0, y: -10000, }}
                 animate={{ opacity: 1, y: -900 }}
                 transition={{ duration: 1.2, delay: 0 }}
@@ -98,6 +101,8 @@ const Project = () => {
                     }}
                 ></div>
             </motion.div>
+
+
             <motion.h1
                 initial={{ opacity: 0, x: -1000 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -105,6 +110,11 @@ const Project = () => {
                 className='text-3D text-8xl uppercase absolute font-extrabold lg:left-6 md:left-6 py-6 mb-10 top-0 animate-gradient'>
                 Projects
             </motion.h1>
+
+            <div className='fixed top-[50vh] z-[1]'>
+                <Menu />
+            </div>
+
             <div className="relative w-full lg:mt-[17vh] md:mt-[40vh] mt-[20vh] pb-12">
 
                 {/* Center vertical line */}
@@ -122,7 +132,7 @@ const Project = () => {
                         return (
                             <div key={index} className={`w-full flex justify-${isLeft ? "end" : "start"} my-2 relative`}
                             >
-                                <div className={`w-1/2 px-4  flex  justify-${isLeft ? "start" : "end"}`}>
+                                <div className={`w-1/2 px-4 flex justify-${isLeft ? "start" : "end"}`}>
                                     <motion.div
                                         initial={{ opacity: 0, x: isLeft ? 100 : -100 }}
                                         animate={{ opacity: 1, x: 0 }}
@@ -144,8 +154,7 @@ const Project = () => {
                                                 </h3>
                                                 <p className={`text-sm font-semibold mb-1 ${isLeft ? "textprimary" : "textsecondary"}`}>
                                                     {project.iconname ? (
-                                                        <img
-                                                            className={`w-9 object-contain ${isLeft ? "bgprimary rounded-xl": ""}`}
+                                                        <img className={`w-7 object-contain ${isLeft ? "bgprimary rounded-lg" : ""}`}
                                                             src={project.icontype}
                                                             alt={project.iconname}
                                                             title={project.iconname}
@@ -158,9 +167,10 @@ const Project = () => {
                                             </div>
                                             <div className=''>
                                                 <Link to={`${project.id}`}>
-                                                    <img className={` object-cover ${isLeft ? "lg:rounded-r-2xl" : "lg:rounded-l-2xl"}
+                                                    <img className={` object-cover border
+                                                    ${isLeft ? "lg:rounded-r-2xl" : "md:rounded-l-2xl"}
                                                     ${isLeft ? "md:rounded-r-2xl" : "md:rounded-l-2xl"}
-                                                    ${isLeft ? "rounded-b-2xl" : "rounded-b-2xl"}
+                                                    ${isLeft ? "rounded-r-2xl" : "rounded-l-2xl"}
                                                     `} loading='lazy' width={200}
                                                         src={project.foto} alt="" />
                                                 </Link>

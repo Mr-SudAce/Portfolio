@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import pp from "../assets/Image/laptop.png"
 import "../App.css"
-import { Tagline, FloatIcon, MenuBar } from '../index.jsx'
+import { Tagline, FloatIcon, MenuBar, Download } from '../index.jsx'
 
 const Home = () => {
     return (
@@ -11,6 +11,9 @@ const Home = () => {
             <MenuBar />
             <motion.div className='h-screen flex relative overflow-hidden items-center justify-center'>
                 <Tagline />
+                <span className='z-[50] absolute top-[85vh] left-[50vh]'>
+                    <Download />
+                </span>
                 <motion.div initial={{ opacity: 0, y: -10000, }}
                     animate={{ opacity: 1, y: -900 }}
                     transition={{ duration: 1.2, delay: 0 }}
