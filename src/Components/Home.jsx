@@ -11,9 +11,13 @@ const Home = () => {
             <MenuBar />
             <motion.div className='h-screen flex relative overflow-hidden items-center justify-center'>
                 <Tagline />
-                <span className='z-[50] absolute top-[85vh] left-[50vh]'>
+                <motion.span
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 4 }}
+                    className='z-[50] absolute top-[85vh] left-[50vh]'>
                     <Download />
-                </span>
+                </motion.span>
                 <motion.div initial={{ opacity: 0, y: -10000, }}
                     animate={{ opacity: 1, y: -900 }}
                     transition={{ duration: 1.2, delay: 0 }}
