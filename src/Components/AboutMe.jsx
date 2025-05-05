@@ -8,7 +8,7 @@ const AboutMe = () => {
   return (
     <>
       <div className="flex flex-wrap justify-center items-center gap-6 p-8 min-h-screen relative bg-gray-100">
-      <Menu />
+        <Menu />
         {/* Blurred background image */}
         <img
           src={p_img}
