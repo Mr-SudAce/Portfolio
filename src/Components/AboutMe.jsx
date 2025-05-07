@@ -6,7 +6,7 @@ import { Menu, SectionCards, Card } from "../index"
 const AboutMe = () => {
   return (
     <>
-      <div className="flex flex-wrap justify-center items-center gap-6 p-8 min-h-screen relative bg-gray-100">
+      <div className="flex flex-wrap justify-center items-center gap-6 p-8 min-h-screen relative bgprimary">
         <div className='fixed top-[50vh] left-0 z-[1]'>
           <Menu />
         </div>
@@ -24,7 +24,7 @@ const AboutMe = () => {
         </h1>
 
         {/* Profile image with decorative corners */}
-        <div className="relative w-[75vh] h-[70vh] rounded-2xl overflow-hidden shadow-xl z-10">
+        <div className="relative w-[75vh] h-[70vh] rounded-2xl overflow-hidden backdrop-blur-xl shadow-xl z-10">
           <img
             src={p_img}
             loading="lazy"
@@ -41,7 +41,7 @@ const AboutMe = () => {
         </div>
 
         {/* Description box */}
-        <div className="w-[70vh] max-h-[70vh] bg-white rounded-2xl p-6 shadow-xl z-10 backdrop-blur-2xl bg-opacity-80">
+        <div className="w-[70vh] max-h-[70vh] bg-white rounded-2xl p-6 shadow-xl z-10 backdrop-blur-3xl bg-opacity-80">
           <div className='flex justify-between mb-4'>
             <div className='dot1'></div>
             <div className='dot2'></div>
@@ -59,30 +59,40 @@ const AboutMe = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto flex flex-col gap-10 px-4 py-10">
 
-        {/* About Me */}
-        <SectionCards title="Me">
-          <p className="text-justify">
-            Hi, my name is <strong>Sudesh Sutihar</strong>. I'm originally from <strong>Barmajhiya, Saptari, Nepal</strong> and currently living in <strong>Dhumbarahi, Kathmandu</strong>. I&apos;m <strong>23 years old</strong>.
-          </p>
-        </SectionCards>
+      <div className='w-[100%] h-1 bgprimary mx-auto '>
+        <div className='w-[80vh] h-1 bgsecondary mx-auto '></div>
+      </div>
 
-        {/* Why Developer */}
-        <SectionCards title="Why I Became a Developer">
-          <p>
-            I&apos;m obsessed with designing and developing functional, beautiful user interfaces that *actually* solve problems and make life easier.
-          </p>
-        </SectionCards>
 
-        {/* Grid Sections */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className='bgprimary max-h-auto py-16 '>
+        <div className="grid grid-cols-2 max-w-6xl mx-auto gap-6 px-4 py-6 ">
+
+          {/* About Me */}
+          <SectionCards title="Me">
+            <p className="text-justify">
+              Hi, my name is <strong>Sudesh Sutihar</strong>. I'm originally from <strong>Barmajhiya, Saptari, Nepal</strong> and currently living in <strong>Dhumbarahi, Kathmandu</strong>. I&apos;m <strong>23 years old</strong>.
+            </p>
+          </SectionCards>
+
+          {/* Why Developer */}
+          <SectionCards title="Why I Became a Developer">
+            <p>
+              I&apos;m obsessed with designing and developing functional, beautiful user interfaces that *actually* solve problems and make life easier.
+            </p>
+          </SectionCards>
+
+          {/* Grid Sections */}
+        </div>
+
+
+        <div className="grid grid-col-2 max-w-6xl mx-auto px-4 lg:grid-cols-2 md:grid-cols-2 gap-6">
 
           {/* Skills */}
           <Card title="Skills">
-            <ul className="list-disc ml-6 text-xs text-gray-700 space-y-1">
-              <li>HTML / CSS / Tailwind</li>
-              <li>JavaScript / React.js</li>
+            <ul className="list-disc ml-6 space-y-1">
+              <li>HTML / CSS / Tailwind / Bootstrap</li>
+              <li>React.js</li>
               <li>Python / Django</li>
               <li>Git / GitHub</li>
             </ul>
@@ -90,8 +100,9 @@ const AboutMe = () => {
 
           {/* Hobbies */}
           <Card title="Hobbies">
-            <ul className="list-disc ml-6 text-xs text-gray-700 space-y-1">
-              <li>Designing UI/UX</li>
+            <ul className="list-disc ml-6 space-y-1">
+              <li>Traveling</li>
+              <li>Hiking</li>
               <li>Coding cool features</li>
               <li>Gaming (mostly FPS and RPGs)</li>
             </ul>
@@ -99,18 +110,17 @@ const AboutMe = () => {
 
           {/* Academic */}
           <Card title="Academic">
-            <ul className="list-disc ml-6 text-xs text-gray-700 space-y-1">
-              <li>Bachelor&apos;s in Computer Science</li>
+            <ul className="list-disc ml-6 space-y-1">
+              <li>Bachelor&apos;s in Computer Application (BCA)</li>
               <li>Working as Full Stack Developer</li>
-              <li>Internship in Django & React Projects</li>
+              <li>Internship in PHP, Django & React Projects</li>
             </ul>
           </Card>
 
           {/* Qualities */}
           <Card title="Qualities">
-            <ul className="list-disc ml-6 text-xs text-gray-700 space-y-1">
+            <ul className="list-disc ml-6 space-y-1">
               <li>Quick learner</li>
-              <li>Detail-oriented</li>
               <li>Great communicator</li>
               <li>Team player</li>
             </ul>

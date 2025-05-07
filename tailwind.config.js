@@ -7,10 +7,10 @@ export default {
   theme: {
     extend: {
       boxShadow: {
-        'inner-lg': 'inset 0rem 0rem 2rem rgba(0, 0, 0, 1)',
+        'inner-lg': 'inset 0rem 0rem 2rem rgba(255, 255, 255, 0.3)',
       },
       animation: {
-        gradient: "gradientBG 5s ease infinite",
+        gradient: "gradientBG 5s ease infinite"
       },
       keyframes: {
         gradientBG: {
