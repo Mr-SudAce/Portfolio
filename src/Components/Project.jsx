@@ -87,83 +87,86 @@ const Project = () => {
     return (
         <>
 
-            <div className='fixed top-[50vh] z-[1]'>
+            <div className='fixed top-[50vh] z-[5]'>
                 <Menu />
             </div>
 
-            <div className="relative w-full pb-12">
+            <Bg />
+            <div className="relative ">
                 <motion.h1
                     initial={{ opacity: 0, x: -1000 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className='text-3D text-8xl uppercase sticky top-[5vh] bg-red-600  font-extrabold py-6 mb-10 animate-gradient -z-[2]'>
+                    className='text-3D text-8xl uppercase sticky top-[5vh]  font-extrabold py-6 mb-10 animate-gradient z-[2]'>
                     Projects
                 </motion.h1>
                 {/* Center vertical line */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.8, delay: 0.8 }}
-                    className="absolute left-1/2 transform -translate-x-1/2 h-[98%] border-l-4 border-gray-300">
-                </motion.div>
 
                 {/* cards */}
 
-                {[...projects]
-                    .sort((a, b) => a.year - b.year)
-                    .map((project, index) => {
-                        const isLeft = index % 2 === 0;
-                        return (
-                            <div key={index} className={`w-full flex justify-${isLeft ? "end" : "start"} my-2 relative`} >
-                                <div className={`w-1/2 px-4 flex justify-${isLeft ? "start" : "end"}`}>
-                                    <motion.div
-                                        initial={{ opacity: 0, x: isLeft ? 100 : -100 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        transition={{ duration: 1, delay: index + 1.5 }}
-                                        viewport={{ once: true }}
-                                        className={`group flex mx-16 ${isLeft ? "items-start" : "items-end justify-end"}  ${isLeft ? "bgsecondary" : "bgprimary"} border border-gray-200 rounded-2xl shadow-md hover:shadow-xl`}
-                                    >
-                                        <div className={`flex flex-col md:flex-row items-center relative gap-6 ${isLeft ? "md:flex-row" : "md:flex-row-reverse"}`}>
-                                            <p className={`text-md font-extrabold uppercase mb-4 tracking-wide absolute p-2 m-0 rounded-xl top-0 border 
-                                                    ${isLeft ? "textprimary bgsecondary lg:-left-[12.6vh] " : " textsecondary bgprimary lg:-right-[12.6vh] "}
+                <div className='max-h-[78vh] overflow-auto p-2 no-scrollbar'>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.8, delay: 0.8 }}
+                        className="absolute left-1/2 transform -translate-x-1/2 h-100 border-l-4 border-gray-300">
+                    </motion.div>
+                    {[...projects]
+                        .sort((a, b) => a.year - b.year)
+                        .map((project, index) => {
+                            const isLeft = index % 2 === 0;
+                            return (
+                                <div key={index} className={`w-full flex justify-${isLeft ? "end" : "start"} my-2 relative`} >
+                                    <div className={`w-1/2 px-4 flex justify-${isLeft ? "start" : "end"}`}>
+                                        <motion.div
+                                            initial={{ opacity: 0, x: isLeft ? 100 : -100 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            transition={{ duration: 1, delay: index + 1.5 }}
+                                            viewport={{ once: true }}
+                                            className={`group flex mx-16 ${isLeft ? "items-start" : "items-end justify-end"}  ${isLeft ? "bgsecondary" : "bgprimary"} border border-gray-200 rounded-2xl shadow-md hover:shadow-xl`}
+                                        >
+                                            <div className={`flex flex-col md:flex-row items-center relative gap-6 ${isLeft ? "md:flex-row" : "md:flex-row-reverse"}`}>
+                                                <p className={`text-md font-extrabold uppercase mb-4 tracking-wide absolute p-2 m-0 rounded-xl top-0 border 
+                                                    ${isLeft ? "textprimary bgsecondary lg:-left-[13vh] " : " textsecondary bgprimary lg:-right-[13vh] "}
                                                     ${isLeft ? "md:-left-[31.6vh]" : "md:-right-[31.6vh]"} 
                                                     ${isLeft ? "-left-[13vh]" : "-right-[13vh]"}`}>
-                                                {project.year}
-                                            </p>
-                                            <div className={`flex flex-col max-w-[25vh] min-w-[10vh] ${isLeft ? "items-start ml-2" : "items-end mr-2"}`}>
-                                                <h3 className={`text-md font-bold ${isLeft ? "textprimary" : "textsecondary"} group-hover:textmain transition-colors duration-300  truncate overflow-hidden whitespace-nowrap`}>
-                                                    {project.title}
-                                                </h3>
-                                                <p className={`text-sm font-semibold mb-1 ${isLeft ? "textprimary" : "textsecondary"}`}>
-                                                    {project.iconname ? (
-                                                        <img className={`w-7 object-contain ${isLeft ? "bgprimary rounded-lg" : ""}`}
-                                                            src={project.icontype}
-                                                            alt={project.iconname}
-                                                            title={project.iconname}
-                                                        />
-                                                    ) : (
-                                                        project.iconname
-                                                    )}
+                                                    {project.year}
                                                 </p>
+                                                <div className={`flex flex-col max-w-[25vh] min-w-[10vh] ${isLeft ? "items-start ml-2" : "items-end mr-2"}`}>
+                                                    <h3 className={`text-md font-bold ${isLeft ? "textprimary" : "textsecondary"} group-hover:textmain transition-colors duration-300  truncate overflow-hidden whitespace-nowrap`}>
+                                                        {project.title}
+                                                    </h3>
+                                                    <p className={`text-sm font-semibold mb-1 ${isLeft ? "textprimary" : "textsecondary"}`}>
+                                                        {project.iconname ? (
+                                                            <img className={`w-7 object-contain ${isLeft ? "bgprimary rounded-lg" : ""}`}
+                                                                src={project.icontype}
+                                                                alt={project.iconname}
+                                                                title={project.iconname}
+                                                            />
+                                                        ) : (
+                                                            project.iconname
+                                                        )}
+                                                    </p>
 
-                                            </div>
-                                            <div className=''>
-                                                <Link to={`${project.id}`}>
-                                                    <img className={` object-cover border
+                                                </div>
+                                                <div className=''>
+                                                    <Link to={`${project.id}`}>
+                                                        <img className={` object-cover border
                                                     ${isLeft ? "lg:rounded-r-2xl" : "md:rounded-l-2xl"}
                                                     ${isLeft ? "md:rounded-r-2xl" : "md:rounded-l-2xl"}
                                                     ${isLeft ? "rounded-r-2xl" : "rounded-l-2xl"}
                                                     `} loading='lazy' width={200}
-                                                        src={project.foto} alt="" />
-                                                </Link>
+                                                            src={project.foto} alt="" />
+                                                    </Link>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </motion.div>
+                                        </motion.div>
+                                    </div>
                                 </div>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                </div>
             </div>
 
 

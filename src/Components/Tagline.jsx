@@ -4,12 +4,12 @@ import React from 'react'
 const Tagline = () => {
     return (
         <>
-            <div className='z-[1] space-y-5 border-black absolute left-12'>
+            <div className='z-[1] space-y-5 border-black absolute top-[40vh] left-12'>
                 <motion.div
                     initial={{ opacity: 0, x: -1000 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.8 }}
-                    className="relative z-[1] rounded-2xl p-8 max-w-5xl mx-auto overflow-hidden backdrop-blur-sm shadow-lg "
+                    className="relative z-[1] rounded-2xl p-8 max-w-5xl mx-auto textmain overflow-hidden backdrop-blur-sm shadow-inner-lg"
                 >
                     {/* Aesthetic animated dots */}
                     <div className="dot1"></div>
@@ -22,8 +22,11 @@ const Tagline = () => {
                         initial={{ opacity: 0, x: -1000 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1.6, delay: 2.2 }}
-                        className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight uppercase mb-6 txtdesign"
-                        
+                        className="text-5xl md:text-7xl lg:text-7xl font-extrabold tracking-tight uppercase txtdesign"
+                        style={{
+                            textShadow: "0px 0rem 2rem var(--primary_color)"
+                        }}
+
                     >
                         Sudesh Sharma
                     </motion.h1>
@@ -34,6 +37,9 @@ const Tagline = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1.8, delay: 2.6 }}
                         className="text-xl md:text-2xl font-semibold mb-4 drop-shadow-xl"
+                        style={{
+                            textShadow: "0px 0rem 2rem var(--primary_color)"
+                        }}
                     >
                         I'm a Full Stack Developer
                     </motion.h2>
@@ -44,6 +50,9 @@ const Tagline = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1.8, delay: 3.0 }}
                         className="text-md md:text-lg mb-2 drop-shadow-xl"
+                        style={{
+                            textShadow: "0px 0rem 2rem var(--primary_color)"
+                        }}
                     >
                         I create web applications that are both functional and beautiful.
                     </motion.p>
@@ -53,6 +62,9 @@ const Tagline = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1.8, delay: 3.4 }}
                         className="text-md md:text-lg drop-shadow-xl"
+                        style={{
+                            textShadow: "0px 0rem 2rem var(--primary_color)"
+                        }}
                     >
                         Let's build something amazing together!
                     </motion.p>

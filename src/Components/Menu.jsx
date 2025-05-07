@@ -28,6 +28,7 @@ const Menu = () => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: item.duration, delay: item.delay }}
                             className='text-4xl p-1  shadow-lg rounded-3' title={`${item.name.charAt(0).toUpperCase()}${item.name.slice(1)}`}
+                            style={{ color: "var(--nav_color)" }}
                         >
                             {item.icon}
                         </motion.span>

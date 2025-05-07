@@ -1,7 +1,7 @@
 :root {
     --primary_color: rgb(0, 0, 0);
-    --secondary_color: rgb(255, 0, 0);
-    --nav_color: rgb(0, 0, 0);
+    --secondary_color: rgb(111, 111, 111);
+    --nav_color: rgb(255, 255, 255);
     --text_color: rgb(255, 255, 255);
 }
 
@@ -45,9 +45,9 @@
 
 
 .dot1 {
-    width: 1rem;
-    height: 1rem;
-    background: linear-gradient(to top right, gray, white);
+    width: 0.8rem;
+    height: 0.8rem;
+    background: linear-gradient(to top right, black, white);
     border-radius: 100%;
     box-shadow: 0 10px 15px -3px black;
     position: absolute;
@@ -56,9 +56,9 @@
 }
 
 .dot2 {
-    width: 1rem;
-    height: 1rem;
-    background: linear-gradient(to top right, gray, white);
+    width: 0.8rem;
+    height: 0.8rem;
+    background: linear-gradient(to top right, black, white);
     border-radius: 100%;
     box-shadow: 0 10px 15px -3px black;
     position: absolute;
@@ -67,9 +67,9 @@
 }
 
 .dot3 {
-    width: 1rem;
-    height: 1rem;
-    background: linear-gradient(to top right, gray, white);
+    width: 0.8rem;
+    height: 0.8rem;
+    background: linear-gradient(to top right, black, white);
     border-radius: 100%;
     box-shadow: 0 10px 15px -3px black;
     position: absolute;
@@ -78,9 +78,9 @@
 }
 
 .dot4 {
-    width: 1rem;
-    height: 1rem;
-    background: linear-gradient(to top right, gray, white);
+    width: 0.8rem;
+    height: 0.8rem;
+    background: linear-gradient(to top right, black, white);
     border-radius: 100%;
     box-shadow: 0 10px 15px -3px black;
     position: absolute;

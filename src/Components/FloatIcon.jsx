@@ -27,6 +27,7 @@ const FloatIcon = () => {
                     initial={{ opacity: 0, y: 650, x: -280 }}
                     animate={{ opacity: 1, y: icon.y, x: icon.x }}
                     transition={{ delay: icon.delay }}
+
                     src={icon.src}
                     alt="icon"
                     className="absolute top-0 right-0 z-50 w-[10vh] h-[10vh]"
