@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import pp from "../assets/Image/laptop.png"
 import "../App.css"
-import { Tagline, FloatIcon, MenuBar, Download, Bg } from '../index.jsx'
+import { Tagline, FloatIcon, MenuBar, Download, Bg, Socialmedia } from '../index.jsx'
 
 const Home = () => {
     return (
@@ -33,6 +33,9 @@ const Home = () => {
                     md:w-[55vh] md:right-10 md:top-5
                     transition-all
                 '/>
+                <div className='absolute left-10 bottom-5   '>
+                    <Socialmedia />
+                </div >
             </motion.div>
             <FloatIcon />
         </>
