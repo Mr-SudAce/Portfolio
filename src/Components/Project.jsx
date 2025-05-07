@@ -6,8 +6,9 @@ import DjangoImg from "../assets/Image/djangoImg.png";
 import PythonImg from "../assets/Image/pythonImg.png";
 import ReactImg from "../assets/Image/reactImg.png";
 import JSImg from "../assets/Image/jsImg.png";
-
+import img from "../assets/Image/connection.png"
 import { Menu, Bg } from "../index"
+import { FaArrowRight } from 'react-icons/fa';
 
 
 
@@ -20,7 +21,7 @@ const projects = [
         icontype: DjangoImg,
         year: "2022",
         side: "left",
-        description: "shhdchsdbkhsdvbkshdvbksbcanasc kdjsbvks,cakjscksadbsdb ks kcjsdbcshhdchsdbkhsdvbkshdvbksbcanasc kdjsbvks,cakjscksadbsdb ks kcjsdbcshhdchsdbkhsdvbkshdvbksbcanasc kdjsbvks,cakjscksadbsdb ks kcjsdbcshhdchsdbkhsdvbkshdvbksbcanasc kdjsbvks,cakjscksadbsdb ks kcjsdbc",
+        description: "It is an Ecommerce site for those who are in rural area and have skill to create some home decor and can sell them from this platform. ",
         links: "https://www.github.com/Mr-SudAce/",
         foto: `https://picsum.photos/id/236/720`
     },
@@ -31,7 +32,7 @@ const projects = [
         icontype: ReactImg,
         year: "2024",
         side: "right",
-        description: "shhdchsdbkhsdvbkshdvbksbcanasc kdjsbvks,cakjscksadbsdb ks kcjsdbc",
+        description: "Here we can able to search word meaning and learn new words",
         links: "https://www.github.com/Mr-SudAce/",
         foto: `https://picsum.photos/id/237/720`
     },
@@ -42,7 +43,7 @@ const projects = [
         icontype: DjangoImg,
         year: "2024",
         side: "left",
-        description: "shhdchsdbkhsdvbkshdvbksbcanasc kdjsbvks,cakjscksadbsdb ks kcjsdbc",
+        description: "It's a Ecommerce site where you can buy latest Electronic item and have best policy ",
         links: "https://www.github.com/Mr-SudAce/",
         foto: `https://picsum.photos/id/238/720`
     },
@@ -53,7 +54,7 @@ const projects = [
         icontype: PythonImg,
         year: "2025",
         side: "right",
-        description: "shhdchsdbkhsdvbkshdvbksbcanasc kdjsbvks,cakjscksadbsdb ks kcjsdbc",
+        description: "Authentication using Pure Python",
         links: "https://www.github.com/Mr-SudAce/",
         foto: `https://picsum.photos/id/239/720`
     },
@@ -64,21 +65,10 @@ const projects = [
         icontype: JSImg,
         year: "2023",
         side: "left",
-        description: "shhdchsdbkhsdvbkshdvbksbcanasc kdjsbvks,cakjscksadbsdb ks kcjsdbc",
+        description: "Take Time and Enjoy it ",
         links: "https://www.github.com/Mr-SudAce/",
         foto: `https://picsum.photos/id/240/720`
-    },
-    {
-        id: 6,
-        title: "Clock",
-        iconname: "Js",
-        icontype: JSImg,
-        year: "2021",
-        side: "left",
-        description: "shhdchsdbkhsdvbkshdvbksbcanasc kdjsbvks,cakjscksadbsdb ks kcjsdbc",
-        links: "https://www.github.com/Mr-SudAce/",
-        foto: `https://picsum.photos/id/241/720`
-    },
+    }
 ];
 
 
@@ -91,13 +81,13 @@ const Project = () => {
                 <Menu />
             </div>
 
-            <Bg />
-            <div className="relative ">
+            {/* <Bg /> */}
+            <div className="relative  ">
                 <motion.h1
                     initial={{ opacity: 0, x: -1000 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className='text-3D text-8xl uppercase sticky top-[5vh]  font-extrabold py-6 mb-10 animate-gradient z-[2]'>
+                    className='text-3D text-8xl uppercase sticky font-extrabold pl-[10vh] py-6 mb-10 animate-gradient z-[2]'>
                     Projects
                 </motion.h1>
                 {/* Center vertical line */}
@@ -116,54 +106,62 @@ const Project = () => {
                         .map((project, index) => {
                             const isLeft = index % 2 === 0;
                             return (
-                                <div key={index} className={`w-full flex justify-${isLeft ? "end" : "start"} my-2 relative`} >
-                                    <div className={`w-1/2 px-4 flex justify-${isLeft ? "start" : "end"}`}>
+                                <div key={index} className={`max-w-7xl mx-auto flex justify-${isLeft ? "end" : "start"} my-6`} >
+                                    <div className={`w-full md:w-1/2 px-4 flex justify-${isLeft ? "start" : "end"}`}>
                                         <motion.div
                                             initial={{ opacity: 0, x: isLeft ? 100 : -100 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             whileInView={{ opacity: 1, x: 0 }}
-                                            transition={{ duration: 1, delay: index + 1.5 }}
+                                            transition={{ duration: 0.8, delay: index * 0.2 }}
                                             viewport={{ once: true }}
-                                            className={`group flex mx-16 ${isLeft ? "items-start" : "items-end justify-end"}  ${isLeft ? "bgsecondary" : "bgprimary"} border border-gray-200 rounded-2xl shadow-md hover:shadow-xl`}
+                                            className={`group relative bg-white dark:bg-neutral-900 border rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300 w-full max-w-3xl overflow-hidden flex flex-col md:flex-row ${isLeft ? "md:flex-row" : "md:flex-row-reverse"}`}
                                         >
-                                            <div className={`flex flex-col md:flex-row items-center relative gap-6 ${isLeft ? "md:flex-row" : "md:flex-row-reverse"}`}>
-                                                <p className={`text-md font-extrabold uppercase mb-4 tracking-wide absolute p-2 m-0 rounded-xl top-0 border 
-                                                    ${isLeft ? "textprimary bgsecondary lg:-left-[13vh] " : " textsecondary bgprimary lg:-right-[13vh] "}
-                                                    ${isLeft ? "md:-left-[31.6vh]" : "md:-right-[31.6vh]"} 
-                                                    ${isLeft ? "-left-[13vh]" : "-right-[13vh]"}`}>
-                                                    {project.year}
-                                                </p>
-                                                <div className={`flex flex-col max-w-[25vh] min-w-[10vh] ${isLeft ? "items-start ml-2" : "items-end mr-2"}`}>
-                                                    <h3 className={`text-md font-bold ${isLeft ? "textprimary" : "textsecondary"} group-hover:textmain transition-colors duration-300  truncate overflow-hidden whitespace-nowrap`}>
+                                            {/* Year Tag */}
+                                            <span
+                                                className={`absolute top-4 text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full z-10 ${isLeft ? "left-4 bgsecondary textprimary" : "right-4 bgprimary textmain"}`}
+                                            >
+                                                {project.year}
+                                            </span>
+
+                                            {/* Image */}
+                                            <div className="relative w-full md:w-1/2 h-56 md:h-auto overflow-hidden">
+                                                <Link to={`${project.id}`}>
+                                                    <img
+                                                        src={project.foto}
+                                                        alt={project.title}
+                                                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                                        loading="lazy"
+                                                    />
+                                                </Link>
+                                            </div>
+
+                                            {/* Content */}
+                                            <div className="w-full md:w-1/2 p-6 flex flex-col justify-center space-y-4">
+                                                <div className="flex items-center gap-3">
+                                                    {project.iconname && (
+                                                        <img
+                                                            src={project.icontype}
+                                                            alt={project.iconname}
+                                                            className="w-8 h-8 object-contain"
+                                                            title={project.iconname}
+                                                        />
+                                                    )}
+                                                    <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 transition-colors duration-300">
                                                         {project.title}
                                                     </h3>
-                                                    <p className={`text-sm font-semibold mb-1 ${isLeft ? "textprimary" : "textsecondary"}`}>
-                                                        {project.iconname ? (
-                                                            <img className={`w-7 object-contain ${isLeft ? "bgprimary rounded-lg" : ""}`}
-                                                                src={project.icontype}
-                                                                alt={project.iconname}
-                                                                title={project.iconname}
-                                                            />
-                                                        ) : (
-                                                            project.iconname
-                                                        )}
-                                                    </p>
+                                                </div>
+                                                <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-4">
+                                                    {project.description || "No description available. Add one to show off your work!"}
+                                                </p>
 
-                                                </div>
-                                                <div className=''>
-                                                    <Link to={`${project.id}`}>
-                                                        <img className={` object-cover border
-                                                    ${isLeft ? "lg:rounded-r-2xl" : "md:rounded-l-2xl"}
-                                                    ${isLeft ? "md:rounded-r-2xl" : "md:rounded-l-2xl"}
-                                                    ${isLeft ? "rounded-r-2xl" : "rounded-l-2xl"}
-                                                    `} loading='lazy' width={200}
-                                                            src={project.foto} alt="" />
-                                                    </Link>
-                                                </div>
+                                                <Link to={project.links} className='textmain flex justify-end'>
+                                                    <FaArrowRight />
+                                                </Link>
                                             </div>
                                         </motion.div>
                                     </div>
                                 </div>
+
                             );
                         })}
                 </div>

@@ -11,3 +11,4 @@ export { default as Download } from './Components/Download';
 export { default as SectionCards } from "./Components/Template/SectionCards";
 export { default as Card } from "./Components/Template/Card";
 export { default as Bg } from "./Components/Bg";
+export { default as Socialmedia } from "./Components/Socialmedia";

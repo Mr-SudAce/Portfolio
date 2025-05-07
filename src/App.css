@@ -1,6 +1,6 @@
 :root {
     --primary_color: rgb(0, 0, 0);
-    --secondary_color: rgb(111, 111, 111);
+    --secondary_color: rgb(105, 105, 105);
     --nav_color: rgb(255, 255, 255);
     --text_color: rgb(255, 255, 255);
 }
@@ -38,9 +38,9 @@
     -webkit-text-fill-color: transparent;
     font-weight: bolder;
     text-shadow:
-        2px 2px 0 rgba(255, 255, 255, 0.2),
-        4px 4px 0 rgba(0, 0, 0, 0.2),
-        6px 6px 0 rgba(0, 0, 0, 0.1);
+        0px 0px 0px rgb(255, 255, 255, 0.7),
+        0px 0px 0px rgba(0, 0, 0, 0.2),
+        0px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -86,4 +86,32 @@
     position: absolute;
     bottom: 0.5rem;
     left: 0.5rem;
+}
+
+
+.text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typeAndDelete 4s steps(20) infinite;
+    /* margin-top: 1.5em; */
+}
+
+@keyframes typeAndDelete {
+
+    0%,
+    10% {
+        width: 0;
+    }
+
+    45%,
+    55% {
+        width: 10em;
+    }
+
+    /* adjust width based on content */
+    90%,
+    100% {
+        width: 0;
+    }
 }

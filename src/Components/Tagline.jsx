@@ -9,7 +9,7 @@ const Tagline = () => {
                     initial={{ opacity: 0, x: -1000 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.8 }}
-                    className="relative z-[1] rounded-2xl p-8 max-w-5xl mx-auto textmain overflow-hidden backdrop-blur-sm shadow-inner-lg"
+                    className="relative z-[1] rounded-2xl p-8 w-[85vh] mx-auto textmain overflow-hidden backdrop-blur-sm shadow-inner-lg"
                 >
                     {/* Aesthetic animated dots */}
                     <div className="dot1"></div>
@@ -19,16 +19,19 @@ const Tagline = () => {
 
                     {/* Main Name */}
                     <motion.h1
-                        initial={{ opacity: 0, x: -1000 }}
+                        initial={{ opacity: 0, x: 0 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1.6, delay: 2.2 }}
+                        transition={{ duration: 1.6, delay: 4.2 }}
                         className="text-5xl md:text-7xl lg:text-7xl font-extrabold tracking-tight uppercase txtdesign"
                         style={{
                             textShadow: "0px 0rem 2rem var(--primary_color)"
                         }}
 
                     >
-                        Sudesh Sharma
+                        <p className='text'>
+                            Sudesh Sharma
+                        </p>
+
                     </motion.h1>
 
                     {/* Subtitle */}
