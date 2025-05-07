@@ -3,22 +3,27 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import pp from "../assets/Image/laptop.png"
 import "../App.css"
-import { Tagline, FloatIcon, MenuBar, Download } from '../index.jsx'
+import { Tagline, FloatIcon, MenuBar, Download, Bg } from '../index.jsx'
 
 const Home = () => {
     return (
         <>
+            <div className="dot1 z-[1]"></div>
+            <div className="dot2 z-[1]"></div>
+            <div className="dot3 z-[1]"></div>
+            <div className="dot4 z-[1]"></div>
             <MenuBar />
-            <motion.div className='h-screen flex relative overflow-hidden items-center justify-center'>
+            <Bg />
+            <motion.div className='h-screen flex relative overflow-hidden items-center justify-center shadow-inner-lg'>
                 <Tagline />
                 <motion.span
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 4 }}
-                    className='z-[50] absolute top-[85vh] left-[50vh]'>
+                    className='z-[50] absolute top-[82vh] left-[60vh] '>
                     <Download />
                 </motion.span>
-                <motion.div initial={{ opacity: 0, y: -10000, }}
+                {/* <motion.div initial={{ opacity: 0, y: -10000, }}
                     animate={{ opacity: 1, y: -900 }}
                     transition={{ duration: 1.2, delay: 0 }}
                     className='fixed bg-red-700'>
@@ -31,7 +36,7 @@ const Home = () => {
                             backgroundImage: "linear-gradient(to left, var(--primary_color) 70%, var(--secondary_color) 100%)",
                         }}
                     ></div>
-                </motion.div>
+                </motion.div> */}
                 <motion.img
                     initial={{ opacity: 0, x: 500 }}
                     animate={{ opacity: 1, x: 0 }}

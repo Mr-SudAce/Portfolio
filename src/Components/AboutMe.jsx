@@ -1,13 +1,13 @@
 import React from 'react'
 import p_img from "../assets/Image/hi.png"
-import { Menu, SectionCards } from "../index"
+import { Menu, SectionCards, Card } from "../index"
 
 
 const AboutMe = () => {
   return (
     <>
       <div className="flex flex-wrap justify-center items-center gap-6 p-8 min-h-screen relative bg-gray-100">
-        <div className='fixed top-[50vh] left-0'>
+        <div className='fixed top-[50vh] left-0 z-[1]'>
           <Menu />
         </div>
         {/* Blurred background image */}
@@ -32,10 +32,10 @@ const AboutMe = () => {
             className="w-full h-full object-contain rounded-2xl"
           />
           {/* Decorative corner dots */}
-          {['top-2 left-2', 'top-2 right-2', 'bottom-2 left-2', 'bottom-2 right-2'].map((pos, idx) => (
+          {['dot1', 'dot2', 'dot3', 'dot4'].map((pos, idx) => (
             <div
               key={idx}
-              className={`w-4 h-4 bg-gradient-to-tr shadow-lg shadow-black from-white to-gray-400 rounded-full absolute ${pos}`}
+              className={`${pos}`}
             />
           ))}
         </div>
@@ -43,8 +43,8 @@ const AboutMe = () => {
         {/* Description box */}
         <div className="w-[70vh] max-h-[70vh] bg-white rounded-2xl p-6 shadow-xl z-10 backdrop-blur-2xl bg-opacity-80">
           <div className='flex justify-between mb-4'>
-            <div className='w-4 h-4 bg-gradient-to-tr shadow-lg shadow-black from-white to-gray-400 rounded-full absolute top-2  '></div>
-            <div className='w-4 h-4 bg-gradient-to-tr shadow-lg shadow-black from-white to-gray-400 rounded-full absolute top-2 right-2 '></div>
+            <div className='dot1'></div>
+            <div className='dot2'></div>
           </div>
           <h2 className="text-3xl font-semibold text-gray-900 mb-4">I'm Sudesh</h2>
           <p className="text-lg text-gray-700 mb-3 text-justify">
@@ -79,42 +79,42 @@ const AboutMe = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
           {/* Skills */}
-          <SectionCards title="Skills">
+          <Card title="Skills">
             <ul className="list-disc ml-6 text-xs text-gray-700 space-y-1">
               <li>HTML / CSS / Tailwind</li>
               <li>JavaScript / React.js</li>
               <li>Python / Django</li>
               <li>Git / GitHub</li>
             </ul>
-          </SectionCards>
+          </Card>
 
           {/* Hobbies */}
-          <SectionCards title="Hobbies">
+          <Card title="Hobbies">
             <ul className="list-disc ml-6 text-xs text-gray-700 space-y-1">
               <li>Designing UI/UX</li>
               <li>Coding cool features</li>
               <li>Gaming (mostly FPS and RPGs)</li>
             </ul>
-          </SectionCards>
+          </Card>
 
           {/* Academic */}
-          <SectionCards title="Academic">
+          <Card title="Academic">
             <ul className="list-disc ml-6 text-xs text-gray-700 space-y-1">
               <li>Bachelor&apos;s in Computer Science</li>
               <li>Working as Full Stack Developer</li>
               <li>Internship in Django & React Projects</li>
             </ul>
-          </SectionCards>
+          </Card>
 
           {/* Qualities */}
-          <SectionCards title="Qualities">
+          <Card title="Qualities">
             <ul className="list-disc ml-6 text-xs text-gray-700 space-y-1">
               <li>Quick learner</li>
               <li>Detail-oriented</li>
               <li>Great communicator</li>
               <li>Team player</li>
             </ul>
-          </SectionCards>
+          </Card>
         </div>
       </div>
     </>

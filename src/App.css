@@ -1,7 +1,7 @@
 :root {
     --primary_color: rgb(0, 0, 0);
-    --secondary_color: rgb(255, 255, 255);
-    --nav_color:rgb(0, 0, 0);
+    --secondary_color: rgb(255, 0, 0);
+    --nav_color: rgb(0, 0, 0);
     --text_color: rgb(255, 255, 255);
 }
 
@@ -36,9 +36,54 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-
+    font-weight: bolder;
     text-shadow:
         2px 2px 0 rgba(255, 255, 255, 0.2),
         4px 4px 0 rgba(0, 0, 0, 0.2),
         6px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.dot1 {
+    width: 1rem;
+    height: 1rem;
+    background: linear-gradient(to top right, gray, white);
+    border-radius: 100%;
+    box-shadow: 0 10px 15px -3px black;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5em;
+}
+
+.dot2 {
+    width: 1rem;
+    height: 1rem;
+    background: linear-gradient(to top right, gray, white);
+    border-radius: 100%;
+    box-shadow: 0 10px 15px -3px black;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+.dot3 {
+    width: 1rem;
+    height: 1rem;
+    background: linear-gradient(to top right, gray, white);
+    border-radius: 100%;
+    box-shadow: 0 10px 15px -3px black;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+}
+
+.dot4 {
+    width: 1rem;
+    height: 1rem;
+    background: linear-gradient(to top right, gray, white);
+    border-radius: 100%;
+    box-shadow: 0 10px 15px -3px black;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
 }

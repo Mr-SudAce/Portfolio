@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div className='h-screen'>
+        <div className="h-screen ">
           <Routes>
             <Route path="/" element={<index.StartPoint />} />
             <Route path="home/" element={<index.Home />} />

@@ -7,7 +7,7 @@ import PythonImg from "../assets/Image/pythonImg.png";
 import ReactImg from "../assets/Image/reactImg.png";
 import JSImg from "../assets/Image/jsImg.png";
 
-import { Menu } from "../index"
+import { Menu, Bg } from "../index"
 
 
 
@@ -87,51 +87,34 @@ const Project = () => {
     return (
         <>
 
-            <motion.div initial={{ opacity: 0, y: -10000, }}
-                animate={{ opacity: 1, y: -900 }}
-                transition={{ duration: 1.2, delay: 0 }}
-                className='fixed bg-red-700'>
-                <div className='absolute transition-all
-                            h-[200vh] w-[250vh] rotate-45
-                            lg:h-[190vh] lg:w-[350vh] lg:rotate-45 lg:top-0
-                            md:h-[200vh] md:w-[550vh] md:rotate-45 md:top-[200vh]
-                            '
-                    style={{
-                        backgroundImage: "linear-gradient(to left, var(--primary_color) 20%, var(--secondary_color) 100%)",
-                    }}
-                ></div>
-            </motion.div>
-
-
-            <motion.h1
-                initial={{ opacity: 0, x: -1000 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className='text-3D text-8xl uppercase absolute font-extrabold lg:left-6 md:left-6 py-6 mb-10 top-0 animate-gradient'>
-                Projects
-            </motion.h1>
-
             <div className='fixed top-[50vh] z-[1]'>
                 <Menu />
             </div>
 
-            <div className="relative w-full lg:mt-[17vh] md:mt-[40vh] mt-[20vh] pb-12">
-
+            <div className="relative w-full pb-12">
+                <motion.h1
+                    initial={{ opacity: 0, x: -1000 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className='text-3D text-8xl uppercase sticky top-[5vh] bg-red-600  font-extrabold py-6 mb-10 animate-gradient -z-[2]'>
+                    Projects
+                </motion.h1>
                 {/* Center vertical line */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.8 }}
-                    className="absolute left-1/2 transform -translate-x-1/2 h-[98%] border-l-4 border-gray-300"></motion.div>
+                    className="absolute left-1/2 transform -translate-x-1/2 h-[98%] border-l-4 border-gray-300">
+                </motion.div>
 
                 {/* cards */}
+
                 {[...projects]
                     .sort((a, b) => a.year - b.year)
                     .map((project, index) => {
                         const isLeft = index % 2 === 0;
                         return (
-                            <div key={index} className={`w-full flex justify-${isLeft ? "end" : "start"} my-2 relative`}
-                            >
+                            <div key={index} className={`w-full flex justify-${isLeft ? "end" : "start"} my-2 relative`} >
                                 <div className={`w-1/2 px-4 flex justify-${isLeft ? "start" : "end"}`}>
                                     <motion.div
                                         initial={{ opacity: 0, x: isLeft ? 100 : -100 }}
@@ -143,9 +126,9 @@ const Project = () => {
                                     >
                                         <div className={`flex flex-col md:flex-row items-center relative gap-6 ${isLeft ? "md:flex-row" : "md:flex-row-reverse"}`}>
                                             <p className={`text-md font-extrabold uppercase mb-4 tracking-wide absolute p-2 m-0 rounded-xl top-0 border 
-                                                    ${isLeft ? "textprimary bgsecondary lg:-left" : " textsecondary bgprimary lg:-right"}-[12.6vh] 
-                                                    ${isLeft ? "md:-left" : "md:-right"}-[31.6vh] 
-                                                    ${isLeft ? "-left" : "-right"}-[13vh]`}>
+                                                    ${isLeft ? "textprimary bgsecondary lg:-left-[12.6vh] " : " textsecondary bgprimary lg:-right-[12.6vh] "}
+                                                    ${isLeft ? "md:-left-[31.6vh]" : "md:-right-[31.6vh]"} 
+                                                    ${isLeft ? "-left-[13vh]" : "-right-[13vh]"}`}>
                                                 {project.year}
                                             </p>
                                             <div className={`flex flex-col max-w-[25vh] min-w-[10vh] ${isLeft ? "items-start ml-2" : "items-end mr-2"}`}>
@@ -181,9 +164,9 @@ const Project = () => {
                             </div>
                         );
                     })}
-
-
             </div>
+
+
         </>
     )
 }

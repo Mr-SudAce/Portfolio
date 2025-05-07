@@ -3,41 +3,62 @@ import { motion } from 'framer-motion'
 import React from 'react'
 const Tagline = () => {
     return (
-        <div className='absolute left-10 z-10 space-y-7 uppercase' >
+        <>
+            <div className='z-[1] space-y-5 border-black absolute left-12'>
+                <motion.div
+                    initial={{ opacity: 0, x: -1000 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, delay: 0.8 }}
+                    className="relative z-[1] rounded-2xl p-8 max-w-5xl mx-auto overflow-hidden backdrop-blur-sm shadow-lg "
+                >
+                    {/* Aesthetic animated dots */}
+                    <div className="dot1"></div>
+                    <div className="dot2"></div>
+                    <div className="dot3"></div>
+                    <div className="dot4"></div>
 
-            <motion.h1
-                initial={{ opacity: 0, x: -1000 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1.6, delay: 2.2 }}
-                className="text-3D text-8xl font-extrabold">
-                Sudesh Sharma
-            </motion.h1>
+                    {/* Main Name */}
+                    <motion.h1
+                        initial={{ opacity: 0, x: -1000 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1.6, delay: 2.2 }}
+                        className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight uppercase mb-6 txtdesign"
+                        
+                    >
+                        Sudesh Sharma
+                    </motion.h1>
 
-            <motion.h1
-                initial={{ opacity: 0, x: -1000 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1.8, delay: 2.6 }}
-                className='text-3D text-4xl font-bold'>
-                I'm a Full Stack Developer</motion.h1>
-            <motion.h1
-                initial={{ opacity: 0, x: -1000 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1.8, delay: 2.6 }}
-                className='text-3D text-2xl font-bold'>
-                (Django and React)</motion.h1>
-            <motion.p
-                initial={{ opacity: 0, x: -1000 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 2.2, delay: 2.8 }}
-                className='text-sm font-bold'>
-                I create web applications that are both functional and beautiful.</motion.p>
-            <motion.p
-                initial={{ opacity: 0, x: -1000 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 2.2, delay: 3 }}
-                className='text-sm font-bold'>
-                Let's build something amazing together!</motion.p>
-        </div>
+                    {/* Subtitle */}
+                    <motion.h2
+                        initial={{ opacity: 0, x: -1000 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1.8, delay: 2.6 }}
+                        className="text-xl md:text-2xl font-semibold mb-4 drop-shadow-xl"
+                    >
+                        I'm a Full Stack Developer
+                    </motion.h2>
+
+                    {/* Tagline */}
+                    <motion.p
+                        initial={{ opacity: 0, x: -1000 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1.8, delay: 3.0 }}
+                        className="text-md md:text-lg mb-2 drop-shadow-xl"
+                    >
+                        I create web applications that are both functional and beautiful.
+                    </motion.p>
+
+                    <motion.p
+                        initial={{ opacity: 0, x: -1000 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1.8, delay: 3.4 }}
+                        className="text-md md:text-lg drop-shadow-xl"
+                    >
+                        Let's build something amazing together!
+                    </motion.p>
+                </motion.div>
+            </div>
+        </>
     )
 }
 
