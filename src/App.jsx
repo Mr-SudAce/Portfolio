@@ -1,25 +1,27 @@
-/* eslint-disable no-unused-vars */
-import * as index from "./index.jsx";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './App.css'
+import About from './components/About';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Projects from './components/Projects';
+import Services from './components/Services';
+import Testimonials from './components/Testimonials';
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <div className="h-screen bg-black">
-          <Routes>
-            <Route path="/" element={<index.StartPoint />} />
-            <Route path="home/" element={<index.Home />} />
-            <Route path="projects/" element={<index.Project />} />
-            <Route path="projects/:id" element={<index.ProjectDetails />} />
-            <Route path="aboutme/" element={<index.AboutMe />} />
-            <Route path="contact/" element={<index.Contact />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
-    </>
-  )
+    <div className="font-sans text-gray-900 antialiased bg-white">
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Services />
+        <Projects />
+        <Testimonials />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;

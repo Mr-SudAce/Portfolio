@@ -1,29 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {
-      boxShadow: {
-        'inner-lg': 'inset 0rem 0rem 2rem rgba(255, 255, 255, 0.3)',
-      },
-      animation: {
-        gradient: "gradientBG 5s ease infinite"
-      },
-      keyframes: {
-        gradientBG: {
-          "0%, 100%": {
-            backgroundPosition: "0% 50%",
-          },
-          "50%": {
-            backgroundPosition: "100% 50%",
-          },
-        },
-      },
-    },
+    extend: {},
   },
   plugins: [],
 }
-
