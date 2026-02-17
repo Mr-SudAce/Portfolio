@@ -22,7 +22,7 @@ const Services = () => {
     },
     {
       title: 'Database Management',
-      description: 'Designing efficient database schemas and managing data integrity with PostgreSQL and MySQL.',
+      description: 'Designing efficient database schemas and managing data integrity with SQLite3 and MySQL.',
       icon: (
         <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
@@ -34,7 +34,7 @@ const Services = () => {
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Motion.div 
+        <Motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -49,8 +49,8 @@ const Services = () => {
         <div className="mt-10">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
-              <Motion.div 
-                key={index} 
+              <Motion.div
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -62,7 +62,7 @@ const Services = () => {
                       {service.icon}
                     </div>
                     <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">{service.title}</h3>
-                    <p className="mt-5 text-base text-gray-500">{service.description}</p>
+                    <p className="mt-5 text-base text-gray-500 text-justify">{service.description}</p>
                   </div>
                 </div>
               </Motion.div>

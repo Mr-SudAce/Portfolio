@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 
 const projects = [
   {
@@ -29,13 +29,20 @@ const projects = [
     link: 'https://github.com/Mr-SudAce/',
     image: 'https://picsum.photos/id/239/720/400'
   },
+  {
+    title: 'Raktabandhan - Blood Donation System',
+    description: 'Developed donor registration and blood-group search system using Flask. Designed efficient filtering logic to improve emergency access. Created clean and responsive user interface.',
+    tags: ['Flask', 'Python', 'Full Stack'],
+    link: 'https://github.com/Mr-SudAce/',
+    image: 'https://picsum.photos/id/249/720/400'
+  },
 ];
 
 const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <Motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -43,14 +50,14 @@ const Projects = () => {
           className="text-center">
           <h2 className="text-base text-primary font-semibold tracking-wide uppercase">Portfolio</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Recent Projects
+            Key Projects
           </p>
-        </motion.div>
+        </Motion.div>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-3 sm:grid-cols-2">
           {projects.map((project, index) => (
-            <motion.div 
-              key={index} 
+            <Motion.div
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -79,7 +86,7 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
       </div>
