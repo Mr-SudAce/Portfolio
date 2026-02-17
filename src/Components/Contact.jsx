@@ -1,10 +1,16 @@
+import { motion as Motion } from 'framer-motion';
 
 const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-lg mx-auto md:max-w-none md:grid md:grid-cols-2 md:gap-8">
-          <div>
+          <Motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">
               Get in touch
             </h2>
@@ -25,8 +31,13 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="mt-12 sm:mt-16 md:mt-0">
+          </Motion.div>
+          <Motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="mt-12 sm:mt-16 md:mt-0">
             <form action="#" method="POST" className="grid grid-cols-1 gap-y-6">
               <div>
                 <label htmlFor="full-name" className="sr-only">Full name</label>
@@ -35,7 +46,7 @@ const Contact = () => {
                   name="full-name"
                   id="full-name"
                   autoComplete="name"
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md border"
+                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-primary focus:border-primary border-gray-300 rounded-md border"
                   placeholder="Full name"
                 />
               </div>
@@ -46,7 +57,7 @@ const Contact = () => {
                   name="email"
                   type="email"
                   autoComplete="email"
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md border"
+                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-primary focus:border-primary border-gray-300 rounded-md border"
                   placeholder="Email"
                 />
               </div>
@@ -56,20 +67,20 @@ const Contact = () => {
                   id="message"
                   name="message"
                   rows={4}
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md border"
+                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-primary focus:border-primary border-gray-300 rounded-md border"
                   placeholder="Message"
                 />
               </div>
               <div>
                 <button
                   type="submit"
-                  className="w-full inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
+                  className="w-full inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-primary hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-200"
                 >
                   Submit
                 </button>
               </div>
             </form>
-          </div>
+          </Motion.div>
         </div>
       </div>
     </section>

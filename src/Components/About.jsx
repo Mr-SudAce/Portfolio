@@ -1,3 +1,4 @@
+import { motion as Motion } from 'framer-motion';
 
 const About = () => {
   const skills = [
@@ -48,30 +49,41 @@ const About = () => {
   return (
     <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:text-center">
-          <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">About Me</h2>
+        <Motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="lg:text-center">
+          <h2 className="text-base text-primary font-semibold tracking-wide uppercase">About Me</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
             Passionate about creating web experiences
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
             I am a Full Stack Developer originally from Barmajhiya, Saptari, Nepal. I love solving complex problems and learning new skills.
           </p>
-        </div>
+        </Motion.div>
 
         <div className="mt-16">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {skills.map((skill, index) => (
-              <div key={index} className="pt-6">
+              <Motion.div 
+                key={index} 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="pt-6">
                 <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full hover:-translate-y-1 transition-transform duration-300">
                   <div className="-mt-6">
-                    <div className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
+                    <div className="inline-flex items-center justify-center p-3 bg-primary rounded-md shadow-lg">
                       {skill.icon}
                     </div>
                     <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">{skill.title}</h3>
                     <p className="mt-5 text-base text-gray-500">{skill.description}</p>
                   </div>
                 </div>
-              </div>
+              </Motion.div>
             ))}
           </div>
         </div>
@@ -84,12 +96,18 @@ const About = () => {
           </div>
           <div className="space-y-8">
             {experience.map((job, index) => (
-              <div key={index} className="border-l-4 border-indigo-600 pl-4 ml-2">
+              <Motion.div 
+                key={index} 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="border-l-4 border-primary pl-4 ml-2">
                 <h4 className="text-xl font-bold text-gray-900">{job.role}</h4>
-                <p className="text-indigo-600 font-medium">{job.company}</p>
+                <p className="text-primary font-medium">{job.company}</p>
                 <p className="text-sm text-gray-500 mb-2">{job.period}</p>
                 <p className="text-gray-600">{job.description}</p>
-              </div>
+              </Motion.div>
             ))}
           </div>
         </div>

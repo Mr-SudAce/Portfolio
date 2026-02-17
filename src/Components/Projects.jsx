@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 
 const projects = [
   {
@@ -34,16 +35,27 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Portfolio</h2>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center">
+          <h2 className="text-base text-primary font-semibold tracking-wide uppercase">Portfolio</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
             Recent Projects
           </p>
-        </div>
+        </motion.div>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-3 sm:grid-cols-2">
           {projects.map((project, index) => (
-            <div key={index} className="flex flex-col rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300">
+            <motion.div 
+              key={index} 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="flex flex-col rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300">
               <div className="flex-shrink-0">
                 <img className="h-48 w-full object-cover" src={project.image} alt={project.title} loading="lazy" />
               </div>
@@ -55,19 +67,19 @@ const Projects = () => {
                 <div className="mt-6 flex items-center">
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
-                      <span key={tag} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
+                      <span key={tag} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary text-secondary-text">
                         {tag}
                       </span>
                     ))}
                   </div>
                 </div>
                 <div className="mt-6 flex justify-between items-center">
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center text-indigo-600 hover:text-indigo-500 transition-colors font-medium">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center text-primary hover:text-primary-hover transition-colors font-medium">
                     View Code &rarr;
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
