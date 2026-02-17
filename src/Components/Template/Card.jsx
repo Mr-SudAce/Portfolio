@@ -10,7 +10,7 @@ const Card = ({ title, children }) => {
             <span className='flex'>
                 <h2 className="text-2xl font-bold w-40 textmain mb-2 mt-3">{title}</h2>
                 <div className='w-[0.5vh] h-auto bgsecondary mx-2'></div>
-                <div className="text-xs textmain ml-3">{children}</div>
+                <div className="text-sm textmain ml-3">{children}</div>
             </span>
         </section>
     )

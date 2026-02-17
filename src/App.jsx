@@ -14,6 +14,7 @@ function App() {
             <Route path="projects/" element={<index.Project />} />
             <Route path="projects/:id" element={<index.ProjectDetails />} />
             <Route path="aboutme/" element={<index.AboutMe />} />
+            <Route path="contact/" element={<index.Contact />} />
           </Routes>
         </div>
       </BrowserRouter>

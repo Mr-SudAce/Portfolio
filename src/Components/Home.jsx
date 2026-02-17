@@ -20,7 +20,7 @@ const Home = () => {
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 4 }}
-                    className='z-[50] absolute top-[82vh] left-[60vh] '>
+                    className='z-[50] absolute top-[85vh] left-[85vh] '>
                     <Download />
                 </motion.span>
                 <motion.img

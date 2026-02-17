@@ -2,77 +2,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import DjangoImg from "../assets/Image/djangoImg.png";
-import PythonImg from "../assets/Image/pythonImg.png";
-import ReactImg from "../assets/Image/reactImg.png";
-import JSImg from "../assets/Image/jsImg.png";
-import img from "../assets/Image/connection.png"
 import { Menu, Bg } from "../index"
 import { FaArrowRight } from 'react-icons/fa';
+import project from '../../json/project.json';
 
 
 
 
-const projects = [
-    {
-        id: 1,
-        title: "HandiCraft",
-        iconname: "Django",
-        icontype: DjangoImg,
-        year: "2022",
-        side: "left",
-        description: "It is an Ecommerce site for those who are in rural area and have skill to create some home decor and can sell them from this platform. ",
-        links: "https://www.github.com/Mr-SudAce/",
-        foto: `https://picsum.photos/id/236/720`
-    },
-    {
-        id: 2,
-        title: "Dictionary",
-        iconname: "React",
-        icontype: ReactImg,
-        year: "2024",
-        side: "right",
-        description: "Here we can able to search word meaning and learn new words",
-        links: "https://www.github.com/Mr-SudAce/",
-        foto: `https://picsum.photos/id/237/720`
-    },
-    {
-        id: 3,
-        title: "TechSpot",
-        iconname: "Django",
-        icontype: DjangoImg,
-        year: "2024",
-        side: "left",
-        description: "It's a Ecommerce site where you can buy latest Electronic item and have best policy ",
-        links: "https://www.github.com/Mr-SudAce/",
-        foto: `https://picsum.photos/id/238/720`
-    },
-    {
-        id: 4,
-        title: "Authentication",
-        iconname: "Python",
-        icontype: PythonImg,
-        year: "2025",
-        side: "right",
-        description: "Authentication using Pure Python",
-        links: "https://www.github.com/Mr-SudAce/",
-        foto: `https://picsum.photos/id/239/720`
-    },
-    {
-        id: 5,
-        title: "Clock",
-        iconname: "Js",
-        icontype: JSImg,
-        year: "2023",
-        side: "left",
-        description: "Take Time and Enjoy it ",
-        links: "https://www.github.com/Mr-SudAce/",
-        foto: `https://picsum.photos/id/240/720`
-    }
-];
 
 
+const projects = project.projects;
 
+        
 const Project = () => {
     return (
         <>

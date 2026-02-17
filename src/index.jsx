@@ -12,3 +12,5 @@ export { default as SectionCards } from "./Components/Template/SectionCards";
 export { default as Card } from "./Components/Template/Card";
 export { default as Bg } from "./Components/Bg";
 export { default as Socialmedia } from "./Components/Socialmedia";
+export { default as DOB } from "./Components/DOB"
+export { default as Contact } from "./Components/Contact"

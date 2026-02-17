@@ -1,6 +1,6 @@
 import React from 'react'
-import p_img from "../assets/Image/hi.png"
-import { Menu, SectionCards, Card } from "../index"
+import p_img from "../assets/Image/me3.jpg"
+import { Menu, SectionCards, Card, DOB } from "../index"
 
 
 const AboutMe = () => {
@@ -11,7 +11,7 @@ const AboutMe = () => {
           <Menu />
         </div>
         {/* Blurred background image */}
-        <img src={p_img} loading="lazy" alt="Background" className="absolute inset-0 w-full mx-auto h-full my-auto object-cover blur-md opacity-35 z-0"/>
+        <img src={p_img} loading="lazy" alt="Background" className="absolute inset-0 w-full mx-auto h-full my-auto object-cover blur-md opacity-35 z-0" />
 
         {/* Section Title */}
         <h1 className="text-8xl text-3D font-extrabold text-gray-800 z-10 absolute top-16 right-16">
@@ -20,10 +20,10 @@ const AboutMe = () => {
 
         {/* Profile image with decorative corners */}
         <div className="relative w-[75vh] h-[70vh] rounded-2xl overflow-hidden backdrop-blur-xl shadow-xl z-10">
-          <img src={p_img} loading="lazy" alt="Profile" className="w-full h-full object-contain rounded-2xl"/>
+          <img src={p_img} loading="lazy" alt="Profile" className="w-full h-full object-cover rounded-2xl " />
           {/* Decorative corner dots */}
           {['dot1', 'dot2', 'dot3', 'dot4'].map((pos, idx) => (
-            <div key={idx} className={`${pos}`}/>
+            <div key={idx} className={`${pos}`} />
           ))}
         </div>
 
@@ -33,7 +33,7 @@ const AboutMe = () => {
             <div className='dot1'></div>
             <div className='dot2'></div>
           </div>
-          <h2 className="text-3xl font-semibold text-gray-900 mb-4">I'm Sudesh</h2>
+          <h2 className="text-3xl font-semibold text-gray-900 mb-4">I'm Sudesh Sharma</h2>
           <p className="text-lg text-gray-700 mb-3 text-justify">
             A <strong>Full Stack Developer</strong> who loves building
             sleek, functional, and user-first applications from the ground up.
@@ -53,19 +53,20 @@ const AboutMe = () => {
 
 
       <div className='bgprimary max-h-auto py-16 '>
-        <div className="grid grid-cols-2 max-w-6xl mx-auto gap-6 px-4 py-6 ">
+        <div className="grid grid-cols-2 max-w-7xl mx-auto gap-6 px-4 py-6 ">
 
           {/* About Me */}
           <SectionCards title="Me">
             <p className='py-2'>
-              Hi, my name is <strong>Sudesh Sutihar</strong>. I'm originally from <strong>Barmajhiya, Saptari, Nepal</strong> and currently living in <strong>Dhumbarahi, Kathmandu</strong>. I&apos;m <strong>23 years old</strong>.
+              Hi, my name is <strong>Sudesh Sutihar</strong>. I'm originally from <strong>Barmajhiya, Saptari, Nepal</strong> and currently living in <strong>Dhumbarahi, Kathmandu</strong>. I&apos;m <strong className='flex gap-2'>
+                <DOB date="2001-10-22" /> years old.</strong>
             </p>
           </SectionCards>
 
           {/* Why Developer */}
           <SectionCards title="Why I Became a Developer">
             <p className='py-2'>
-              I&apos;m obsessed with designing and developing functional, beautiful user interfaces that *actually* solve problems and make life easier.
+              I&apos;m obsessed with designing and developing functional, beautiful user interfaces that actually solve problems and make life easier.
             </p>
           </SectionCards>
 
@@ -73,7 +74,7 @@ const AboutMe = () => {
         </div>
 
 
-        <div className="grid grid-col-2 max-w-6xl mx-auto px-4 lg:grid-cols-2 md:grid-cols-2 gap-6">
+        <div className="grid grid-col-2 max-w-7xl mx-auto px-4 lg:grid-cols-2 md:grid-cols-2 gap-6">
 
           {/* Skills */}
           <Card title="Skills">
@@ -97,10 +98,10 @@ const AboutMe = () => {
           {/* Hobbies */}
           <Card title="Hobbies">
             <ul className="list-disc ml-6 space-y-1">
-              <li>Traveling</li>
               <li>Hiking</li>
+              <li>Nature Photography</li>
               <li>Coding cool features</li>
-              <li>Gaming (mostly FPS and RPGs)</li>
+              <li>Gaming</li>
             </ul>
           </Card>
 
@@ -108,9 +109,9 @@ const AboutMe = () => {
           {/* Qualities */}
           <Card title="Qualities">
             <ul className="list-disc ml-6 space-y-1">
-              <li>Quick learner</li>
-              <li>Great communicator</li>
-              <li>Team player</li>
+              <li>Eager to learn</li>
+              <li>Good Communicator</li>
+              <li>Team Collaborator</li>
             </ul>
           </Card>
         </div>

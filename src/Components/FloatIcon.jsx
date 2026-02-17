@@ -8,6 +8,9 @@ import BootstrapImg from "../assets/Image/bootstrapImg.png";
 import TailwindImg from "../assets/Image/tailwindImg.png";
 import HTMLImg from "../assets/Image/htmlImg.png";
 import CSSImg from "../assets/Image/cssImg.png";
+import FlaskImg from "../assets/Image/flaskImg.png";
+
+
 const icons = [
     { src: PythonImg, delay: 4.5, y: 490, x: -100 },
     { src: DjangoImg, delay: 4.1, y: 500, x: -500 },
@@ -16,6 +19,7 @@ const icons = [
     { src: TailwindImg, delay: 5.2, y: 520, x: -250 },
     { src: CSSImg, delay: 5.3, y: 400, x: -220 },
     { src: HTMLImg, delay: 5.4, y: 470, x: -340 },
+    { src: FlaskImg, delay: 5.6, y: 570, x: -390 },
 ]
 
 const FloatIcon = () => {

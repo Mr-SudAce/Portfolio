@@ -1,6 +1,5 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
-import React from 'react'
 const Tagline = () => {
     return (
         <>
@@ -22,11 +21,10 @@ const Tagline = () => {
                         initial={{ opacity: 0, x: 0 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1.6, delay: 4.2 }}
-                        className="text-5xl md:text-7xl lg:text-7xl font-extrabold tracking-tight uppercase txtdesign"
+                        className="text-5xl md:text-7xl lg:text-[8vh] font-extrabold tracking-tight uppercase txtdesign"
                         style={{
                             textShadow: "0px 0rem 2rem var(--primary_color)"
                         }}
-
                     >
                         <p className='text'>
                             Sudesh Sharma
