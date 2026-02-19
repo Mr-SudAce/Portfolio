@@ -1,40 +1,46 @@
 import { motion as Motion } from 'framer-motion';
+import HandicraftImg from "../assets/Image/projectImages/HandiCraft.jpg"
+import TechspotImg from "../assets/Image/projectImages/HandiCraft.jpg"
+import DictionaryImg from "../assets/Image/projectImages/HandiCraft.jpg"
+import BloodDonationImg from "../assets/Image/projectImages/RaktaBandhan.jpg"
+import AuthenticationImg from "../assets/Image/projectImages/HandiCraft.jpg"
+
 
 const projects = [
   {
-    title: 'HandiCraft',
+    title: 'HandiCraft - An Online Store',
     description: 'An e-commerce platform for handicraft products. Features include product listing, cart management, and user authentication.',
     tags: ['Django', 'Python', 'HTML/CSS'],
-    link: 'https://github.com/Mr-SudAce/',
-    image: 'https://picsum.photos/id/236/720/400'
+    link: 'https://handicraft.pythonanywhere.com/',
+    image: HandicraftImg
   },
   {
     title: 'TechSpot',
     description: 'A technology blog and news aggregator. Allows users to read latest tech news and articles.',
     tags: ['Django', 'Python', 'Bootstrap'],
     link: 'https://github.com/Mr-SudAce/',
-    image: 'https://picsum.photos/id/238/720/400'
+    image: TechspotImg
   },
   {
     title: 'Dictionary App',
     description: 'A modern dictionary application providing definitions, synonyms, and antonyms using a public API.',
     tags: ['React', 'API Integration', 'CSS'],
     link: 'https://github.com/Mr-SudAce/',
-    image: 'https://picsum.photos/id/237/720/400'
+    image: DictionaryImg
   },
   {
     title: 'Authentication System',
     description: 'A robust user authentication system supporting login, registration, and password recovery.',
     tags: ['Python', 'Security', 'Backend'],
     link: 'https://github.com/Mr-SudAce/',
-    image: 'https://picsum.photos/id/239/720/400'
+    image: AuthenticationImg
   },
   {
     title: 'Raktabandhan - Blood Donation System',
     description: 'Developed donor registration and blood-group search system using Flask. Designed efficient filtering logic to improve emergency access. Created clean and responsive user interface.',
     tags: ['Flask', 'Python', 'Full Stack'],
-    link: 'https://github.com/Mr-SudAce/',
-    image: 'https://picsum.photos/id/249/720/400'
+    link: 'https://raktabandhan.pythonanywhere.com/',
+    image: BloodDonationImg
   },
 ];
 
@@ -82,7 +88,7 @@ const Projects = () => {
                 </div>
                 <div className="mt-6 flex justify-between items-center">
                   <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center text-primary hover:text-primary-hover transition-colors font-medium">
-                    View Code &rarr;
+                    Visit Site &rarr;
                   </a>
                 </div>
               </div>
