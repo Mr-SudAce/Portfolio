@@ -1,9 +1,8 @@
 import { motion as Motion } from 'framer-motion';
 import HandicraftImg from "../assets/Image/projectImages/HandiCraft.jpg"
-import TechspotImg from "../assets/Image/projectImages/HandiCraft.jpg"
-import DictionaryImg from "../assets/Image/projectImages/HandiCraft.jpg"
+// import DictionaryImg from "../assets/Image/projectImages/HandiCraft.jpg"
 import BloodDonationImg from "../assets/Image/projectImages/RaktaBandhan.jpg"
-import AuthenticationImg from "../assets/Image/projectImages/HandiCraft.jpg"
+// import AuthenticationImg from "../assets/Image/projectImages/HandiCraft.jpg"
 
 
 const projects = [
@@ -15,33 +14,26 @@ const projects = [
     image: HandicraftImg
   },
   {
-    title: 'TechSpot',
-    description: 'A technology blog and news aggregator. Allows users to read latest tech news and articles.',
-    tags: ['Django', 'Python', 'Bootstrap'],
-    link: 'https://github.com/Mr-SudAce/',
-    image: TechspotImg
-  },
-  {
-    title: 'Dictionary App',
-    description: 'A modern dictionary application providing definitions, synonyms, and antonyms using a public API.',
-    tags: ['React', 'API Integration', 'CSS'],
-    link: 'https://github.com/Mr-SudAce/',
-    image: DictionaryImg
-  },
-  {
-    title: 'Authentication System',
-    description: 'A robust user authentication system supporting login, registration, and password recovery.',
-    tags: ['Python', 'Security', 'Backend'],
-    link: 'https://github.com/Mr-SudAce/',
-    image: AuthenticationImg
-  },
-  {
     title: 'Raktabandhan - Blood Donation System',
     description: 'Developed donor registration and blood-group search system using Flask. Designed efficient filtering logic to improve emergency access. Created clean and responsive user interface.',
     tags: ['Flask', 'Python', 'Full Stack'],
     link: 'https://raktabandhan.pythonanywhere.com/',
     image: BloodDonationImg
   },
+  // {
+  //   title: 'Dictionary App',
+  //   description: 'A modern dictionary application providing definitions, synonyms, and antonyms using a public API.',
+  //   tags: ['React', 'API Integration', 'CSS'],
+  //   link: 'https://github.com/Mr-SudAce/',
+  //   image: DictionaryImg
+  // },
+  // {
+  //   title: 'Authentication System',
+  //   description: 'A robust user authentication system supporting login, registration, and password recovery.',
+  //   tags: ['Python', 'Security', 'Backend'],
+  //   link: 'https://github.com/Mr-SudAce/',
+  //   image: AuthenticationImg
+  // },
 ];
 
 const Projects = () => {

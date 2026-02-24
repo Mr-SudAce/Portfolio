@@ -1,5 +1,5 @@
 import { motion as Motion } from 'framer-motion';
-import cv from '../assets/CV.pdf';
+import cv from '../assets/SUDESH SUTIHAR CV.pdf';
 
 const Hero = () => {
   return (
