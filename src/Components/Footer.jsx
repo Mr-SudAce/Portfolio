@@ -2,7 +2,7 @@
 const Footer = () => {
   return (
     <footer className="bg-gray-800">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex gap-2 justify-center items-center flex-col md:flex-row">
         <div className="flex justify-center space-x-6">
           <a href="https://github.com/Mr-SudAce/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-300 transition-colors">
             <span className="sr-only">GitHub</span>
@@ -17,8 +17,8 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-        <p className="mt-8 text-center text-base text-gray-400">
-          &copy; {new Date().getFullYear()} Sudesh Sharma. All rights reserved.
+        <p className="text-center text-base text-gray-400">
+          &copy; 2025 - {new Date().getFullYear()} Sudesh Sharma. All rights reserved.
         </p>
       </div>
     </footer>

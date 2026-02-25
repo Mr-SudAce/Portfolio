@@ -15,7 +15,9 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 cursor-pointer">
-            <a href="#" className="text-2xl font-bold text-primary tracking-tighter">Portfolio.</a>
+            <a href="#" className="text-2xl font-bold text-primary tracking-tighter">
+              Sudesh Sharma
+            </a>
           </div>
 
           {/* Desktop Menu */}

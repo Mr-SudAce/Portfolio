@@ -1,4 +1,4 @@
-import { motion as Motion } from 'framer-motion';
+import { motion as Motion } from "framer-motion";
 
 const Contact = () => {
   return (
@@ -16,31 +16,72 @@ const Contact = () => {
             </h2>
             <div className="mt-3">
               <p className="text-lg text-gray-500">
-                I'm currently open to new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                I'm currently open to new opportunities. Whether you have a
+                question or just want to say hi, I'll try my best to get back to
+                you!
               </p>
             </div>
             <div className="mt-9">
-              <div className="flex">
-                <div className="flex-shrink-0">
-                  <svg className="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
+              <div className="flex flex-col gap-4">
+                {/* Email */}
+                <div className="flex items-center">
+                  <div className="flex-shrink-0">
+                    <svg
+                      className="h-6 w-6 text-gray-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </div>
+                  <div className="ml-3 text-base text-gray-500">
+                    <p>sudacesrma2058@gmail.com</p>
+                  </div>
                 </div>
-                <div className="ml-3 text-base text-gray-500">
-                  <p>sudacesrma2058@gmail.com</p>
+
+                {/* Phone */}
+                <div className="flex items-center">
+                  <div className="flex-shrink-0">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6 text-gray-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.52l.7 2.8a2 2 0 01-.45 1.94l-1.27 1.27a16 16 0 006.58 6.58l1.27-1.27a2 2 0 011.94-.45l2.8.7A2 2 0 0121 16.72V19a2 2 0 01-2 2h-1C9.16 21 3 14.84 3 7V5z"
+                      />
+                    </svg>
+                  </div>
+                  <div className="ml-3 text-base text-gray-500">
+                    <p>+977 980-4795706</p>
+                  </div>
                 </div>
               </div>
             </div>
           </Motion.div>
-          <Motion.div 
+          <Motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="mt-12 sm:mt-16 md:mt-0">
+            className="mt-12 sm:mt-16 md:mt-0"
+          >
             <form action="#" method="POST" className="grid grid-cols-1 gap-y-6">
               <div>
-                <label htmlFor="full-name" className="sr-only">Full name</label>
+                <label htmlFor="full-name" className="sr-only">
+                  Full name
+                </label>
                 <input
                   type="text"
                   name="full-name"
@@ -51,7 +92,9 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="sr-only">Email</label>
+                <label htmlFor="email" className="sr-only">
+                  Email
+                </label>
                 <input
                   id="email"
                   name="email"
@@ -62,7 +105,9 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="sr-only">Message</label>
+                <label htmlFor="message" className="sr-only">
+                  Message
+                </label>
                 <textarea
                   id="message"
                   name="message"
